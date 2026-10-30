@@ -1,0 +1,7 @@
+# Diagnostic output: contains SSIDs, IPs, MAC addresses and system logs
+RESULTS-*/
+RISULTATI-*/
+wifi-report-*.tgz
+monitor-*.csv
+
+.DS_Store
