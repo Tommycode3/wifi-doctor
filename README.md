@@ -21,7 +21,7 @@ less RESULTS-<timestamp>/REPORT.txt
 report says so. Results go next to the script (or into `$WIFI_DOCTOR_DIR`):
 `RESULTS-<timestamp>/REPORT.txt`, the raw output of each command in
 `RESULTS-<timestamp>/raw/`, and both compressed in `wifi-report-<timestamp>.tgz`.
-Options: `WIFI_IFACE=en1` (default `en0`), `SAMPLE_SECONDS=90`, `SAMPLE_INTERVAL=2`.
+Options: `WIFI_IFACE=en1` (default `en0`), `SAMPLE_SECONDS` (default 45), `SAMPLE_INTERVAL` (default 3).
 
 For intermittent problems:
 
@@ -79,7 +79,7 @@ that sleeps $t$ seconds and `kill -9`s it; whichever finishes first wins.
   "not associated", hence the SSID fallbacks; without Location Services permission the
   SSID may be unreadable.
 - $N$ uses ICMP. A network that blocks ping but passes TCP is classified as a captive
-  portal or upstream failure; the stage 12 TCP and HTTP results catch that case in the
+  portal or upstream failure; the TCP and HTTP checks catch that case in the
   report but do not feed the verdict.
 - The time series loop counts only the sleep interval, so it runs longer than
   `SAMPLE_SECONDS`.
